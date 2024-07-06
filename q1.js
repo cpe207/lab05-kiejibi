@@ -2,6 +2,7 @@
 function buyItem(hero, shop) {
     if (hero.gold >= shop.price) {
         hero.items.push(shop.item);
+        hero.gold -= shop.price;
     }
     return hero;
 }
